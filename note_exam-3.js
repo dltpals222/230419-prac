@@ -47,11 +47,18 @@ class ExampleTwo {
 
     this._data = {};
 
-    this._data.content = this._valiDateType(content)
-
+    this._data.content = this._valiDateType(content);
+    this._data.style = this._valiDateType(style);
   }
-  _valiDateType(value){
-    if()
+  _valiDateType(value) {
+    if (typeof value === "string") {
+      return value;
+    } else if (typeof value === "object" && Array.isArray(value) === false) {
+      for (let key in value) {
+        if (typeof value[key] === "string") {
+          return `${value} : ${value[key]}`;
+        }
+      }
+    }
   }
-  
 }
