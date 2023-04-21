@@ -92,9 +92,9 @@ function exampleThree(array, functionOne, functionTwo) {
   return arrayResult;
 }
 
-// console.log(exampleThree(basicData, exampleOne, isExampleTwo));
+console.log(exampleThree(basicData, exampleOne, isExampleTwo));
 
-console.log(exampleOne("ㄱ", 1, "number")); // 왜 이거 정상적으로 작동 안하지?
+// console.log(exampleOne("ㄱ", 1, "number")); // 왜 이거 정상적으로 작동 안하지?
 // console.log(isExampleTwo(1, "r"));
 
 // const aaa = typeof "r";
