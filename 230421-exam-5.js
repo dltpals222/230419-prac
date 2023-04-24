@@ -1,4 +1,4 @@
-const basicData = [
+const object = [
   { number: 1, name: "코카콜라", price: 1500 },
   { number: 2, name: "사이다", price: 1200 },
   { number: 3, name: "포카리스웨트", price: 1000 },
@@ -79,7 +79,7 @@ function exampleOne(inputPrice, currency, basicData) {
   inputPriceCompare(inputPrice, basicData);
 }
 
-exampleOne(1000, currency, basicData);
+exampleOne(1000, currency, object);
 
 //강사님 아무리 찾아도 잘 모르겠는데 promise에서 오류가 납니다.
 //일단 오류나는 조건은 reject조건 2가지(물건을 살수 없을때, 타입오류가 났을때) 입니다.
