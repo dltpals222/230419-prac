@@ -45,16 +45,24 @@
       const root = document.getElementById("root");
       const firstUl = first.querySelector("ul");
 
-      moveButton.addEventListener("click", () => {
+      moveButton.addEventListener("click", async () => {
         const firstChild = firstUl.querySelectorAll("li");
         const rootAllChild = Array.from(root.getElementsByTagName("*"));
         if (firstUl.children.length === 0) {
-          rootAllChild.forEach((element) => {
+          await rootAllChild.forEach((element) => {
             element.remove();
           });
+
+          setTimeout(() => {
+            const helloDiv = document.createElement("div");
+            helloDiv.innerHTML = "<h1> Hello! </h1>";
+            console.log("hello!");
+            root.appendChild(helloDiv);
+          }, 1000);
         } else {
-          second.children[0].appendChild(firstChild[0]);
+          await second.children[0].appendChild(firstChild[0]);
         }
+        console.log(rootAllChild.length);
       });
     </script>
   </body>
