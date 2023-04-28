@@ -49,9 +49,6 @@
         const firstChild = firstUl.querySelectorAll("li");
         const rootAllChild = Array.from(root.getElementsByTagName("*"));
         if (firstUl.children.length === 0) {
-          // for (let i = 0; i > rootAllChild.length; i++) {
-          //   rootAllChild[i].remove();
-          // }
           rootAllChild.forEach((element) => {
             element.remove();
           });
