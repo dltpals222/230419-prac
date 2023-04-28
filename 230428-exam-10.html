@@ -47,11 +47,14 @@
 
       moveButton.addEventListener("click", () => {
         const firstChild = firstUl.querySelectorAll("li");
-        const rootAllChild = root.getElementsByTagName("*");
+        const rootAllChild = Array.from(root.getElementsByTagName("*"));
         if (firstUl.children.length === 0) {
-          for (let i = 0; i > rootAllChild.length; i++) {
-            rootAllChild[i].remove();
-          }
+          // for (let i = 0; i > rootAllChild.length; i++) {
+          //   rootAllChild[i].remove();
+          // }
+          rootAllChild.forEach((element) => {
+            element.remove();
+          });
         } else {
           second.children[0].appendChild(firstChild[0]);
         }
