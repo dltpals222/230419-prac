@@ -38,6 +38,12 @@ if(floorNumber === -1){
 6. inquirer로 숫자를 입력할 수 있는 인터페이스를 제작한다.
 [
   {
+    type : 'list'
+    name : 'elevator'
+    message : '어떤 엘리베이터를 탑승하시겠습니까?'
+    choices : ['oddElevator','evenElevator']
+  },
+  {
     type : 'number',
     name : 'floor',
     message : '몇층으로 이동하시겠습니까?'
@@ -54,7 +60,7 @@ if(floorNumber === -1){
 answers를 받아온 후 
 
 if(answers % 2 === 1) {
-  addElevator(answers)
+  oddElevator(answers)
 } else if(answers % 2 === 0) {
   evenElevator(answers)
 }

@@ -10,7 +10,7 @@
 
 // work : 오라클빌딩에는 두개의 엘리베이터가 있다.
 
-function addElevator(floorNumber) {}
+function oddElevator(floorNumber) {}
 
 function evenElevator(floorNumber) {}
 
