@@ -6,6 +6,8 @@ function numberIsInteger(value) {
   }
 }
 
+//numberIsInteger대신에 if 자체에 Number.isInteger을 사용하여 맞으면 true 틀리면 false로 하여 구분하면 됩니다.
+
 class fourArithmeticOperations {
   constructor(a, b) {
     this.a = a;
